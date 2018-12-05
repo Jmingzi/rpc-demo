@@ -1,0 +1,24 @@
+{
+  "name": "rpc-demo",
+  "version": "1.0.0",
+  "description": "node rpc demo",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jmingzi/rpc-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jmingzi/rpc-demo/issues"
+  },
+  "homepage": "https://github.com/Jmingzi/rpc-demo#readme"
+}
