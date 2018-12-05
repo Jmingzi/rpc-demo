@@ -4,5 +4,5 @@ const client = new Client({
 })
 
 client.call('add', [1, 2], res => {
-  console.log('local client', res)
+  console.log('local client callback result: ', res)
 })

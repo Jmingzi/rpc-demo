@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Jmingzi/rpc-demo/issues"
   },
-  "homepage": "https://github.com/Jmingzi/rpc-demo#readme"
+  "homepage": "https://github.com/Jmingzi/rpc-demo#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
 }
