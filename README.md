@@ -1,5 +1,7 @@
 # rpc-demo
 
+### 资料整理
+
 要手动实现rpc，需要再进一步熟悉[stream及实现双工流](https://github.com/Jmingzi/nodejs-learn/blob/master/%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9D%97/stream2.md)和熟练使用[buffer](https://github.com/Jmingzi/nodejs-learn/blob/master/%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9D%97/buffer.md)
 
 如果与java通信，java一般采用的`netty` + `hessian`
@@ -14,6 +16,42 @@
 
 - 阿里[sofa-rpc-node](https://github.com/alipay/sofa-rpc-node)、协议[sofa-bolt-node](https://github.com/alipay/sofa-bolt-node)、操作buffer的模块[byte](https://github.com/node-modules/byte)
 - packetId相关[node-uuid](https://github.com/kelektiv/node-uuid)
+
+### demo详解
+
+文件结构
+```
+.
+├── README.md
+├── example
+│   ├── client.js
+│   ├── index.html
+│   ├── protocol.js
+│   └── server.js
+├── lib
+│   ├── client
+│   │   └── index.js    // 客户端实现
+│   ├── index.js        // 对外暴露
+│   ├── protocol.js     // 编码协议的实现
+│   └── server
+│       └── index.js    // 服务端实现
+```
+
+使用demo
+```shell
+# 启动server
+node example/server.js
+
+# 启动客户端
+node example/client.js
+```
+
+客户端通过调用server上的`add`方法，拿到结果
+```js
+client.call('add', [1, 2], res => {
+  console.log('local client callback result: ', res)
+})
+```
 
 ------------
 
